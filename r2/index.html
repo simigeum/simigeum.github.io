@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>북아일랜드 중고서점</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sulphur+Point|Ubuntu&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        /* font-family: 'Ubuntu', sans-serif; */
+        font-family: 'Sulphur Point', sans-serif;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      input,
+      label,
+      button {
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+      }
+section {content: ""; display: table; clear: both;}
+
+html {overflow-x: hidden;}
+/* 헤더 */
+      .desk.hd {
+        position: fixed;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: transparent;
+        width: 100%;
+        height: 100px;
+        clear: both;
+        z-index: 999;
+      }
+      .hd-wrap {
+        position: relative;
+        left: 20px;
+        top: 22px;
+      }
+      .logo {
+        display: block;
+        font-size: 30px;
+        line-height: 30px;
+        color: black;
+        float: left;
+      }
+      .menu {
+        float: left;
+      }
+      .menu li {
+        float: left;
+        margin-right: 10px;
+      }
+      .menu li a {
+        color: rgb(34, 46, 34);
+        font-weight: 900;
+        text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.301);
+      }
+      .more-button {float: right; margin-right: 40px; position: relative; cursor: pointer;}
+      .more-button img {
+        width: 60px;
+        height: auto;
+      }
+
+/* 메뉴버튼 누르면 나오는 네비게이션 */
+ .navigation {display: none;}
+      /* 메인화면 */
+      
+    .choose { background: #fff1d6; width: 100vw; height: 100vh;
+       
+        }
+      .choose-wrap {
+        width: 100%;
+     
+        background: #fff1d6; position: relative;
+      }
+      .icon_box {
+        width: 100vw;
+      ;
+        margin-top: 160px;
+      }
+
+      .icon_box img {position: relative;
+        display: block;
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+        overflow: hidden;
+        /* margin-top: 160px; */
+      }
+
+      .icon_box img {
+        animation: ani1 16s ease-in-out infinite;
+      }
+
+      @keyframes ani1 {
+        0% {
+          transform: rotate(0deg);
+        }
+        10% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(180deg);
+        }
+        60% {
+          transform: rotate(180deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* 검색버튼 */
+      .main-tit-wrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+      }
+      
+      .search-btn {
+        display: block;
+        width: 260px;
+        /* backdrop-filter: blur(20px); */
+        background:rgba(255, 255, 255, 0.123);
+        margin: 0 auto;
+        margin-top: 360px;
+        text-align: center;
+        font-size: 18px;
+        height: 50px;
+        line-height: 44px;
+   
+        border-width: 3px;
+        border-style: solid;
+        border-color: rgba(255, 255, 255, 0.452);
+
+        border-radius: 30px;
+        box-sizing: border-box;
+        font-weight: 400;
+       transition: 0.6s;
+        color: #fff;
+
+        font-weight: 400;
+      }
+      .search-btn:hover {
+         
+         border-width: 4px;
+          border-color: #fff;
+          height: 50px;
+        line-height: 42px;
+         }
+
+
+      .main-tit {
+        display: block;
+        /* width: 800px; */
+        background: transparent;
+        margin: 0 auto;
+        margin-top: 200px;
+        text-align: center;
+        font-size: 60px;
+        height: 60px;
+        line-height: 60px;
+      }
+      .main-tit-move-white { float: left;}
+      .main-tit-move { 
+        animation: ani2 3s ease-in-out infinite;
+        animation-direction: alternate-reverse;
+      }
+
+@keyframes ani2 {
+       
+        
+        0% {
+          transform: translate(25px);
+        }
+        
+        100% {
+          transform: translate(-18px);
+        }
+
+    
+      }
+      .main-des {  display: block;
+        width: 800px;
+        background: transparent;
+        margin: 0 auto;
+        margin-top: 360px;
+        text-align: center;
+        font-size: 20px;
+        height: 20px;
+        line-height: 20px;}
+
+        .search-form {display: block;
+        width: 600px;
+        background: transparent;
+        margin: 0 auto;
+        margin-top: 120px;
+        text-align: left;
+        font-size: 20px;
+        height: 20px;
+        line-height: 20px;
+        border-bottom: 2px solid; 
+        border-color: rgb(98, 146, 98);
+        padding-bottom: 10px;}
+
+        .search-input{width: 500px; height: 30px; padding-left: 10px;}
+      /* 인트로 */
+.inro {width: 100%; height: 600px; position: relative; display: block;  background: linear-gradient(#fff1d6, rgb(105, 145, 73) );}
+
+      /* 장터 최근 등록 도서 */
+      .book-list { display: block; background: linear-gradient(rgb(105, 145, 73), #1f7055 ); width: 100vw; height: 1000px; position: relative;}
+
+      /* 구름영역 */
+      .clouds { width: 100%; height: 1000px; position: relative;  background: linear-gradient( #1f7055, rgb(3, 3, 70) );}
+    /* 노티스 영역 */
+    .notice { position: relative;
+ width: 100%; height: 800px; background: linear-gradient( rgb(3, 3, 70), rgb(39, 77, 78) ); overflow: hidden;}
+
+
+.ski-bear { position: absolute; bottom: -67px; left: 70%; width: 300px; height: auto;
+ transform : scaleX(1);
+  animation: ani3 8s ease-in-out infinite;
+        animation-direction: reverse;
+ }
+
+ @keyframes ani3 {
+        /* 0% {
+          transform: translate(0px);
+        } */
+        
+        0% {
+          transform:  translate(35vw) scaleX(1);
+        }
+        
+        49.5% {
+          transform: translate(-30vw) scaleX(1);
+        }
+        50% {
+          transform: translate(-31vw) scaleX(-1);
+        }
+        51% {
+          transform: translate(-30vw) scaleX(-1);
+        }
+
+        100% {
+          transform: translate(35vw) scaleX(-1);
+        }
+
+      }
+
+.house { position: absolute; bottom: -89px; left: 8%; width: 400px; height: auto;  }
+    
+.notice-btn {
+
+position: absolute;
+left: calc(50vw - 130px);
+bottom: 300px;
+
+        display: block;
+        width: 260px;
+        /* backdrop-filter: blur(20px); */
+        background:  rgb(3, 3, 70);
+   
+        margin: 0 auto;
+        margin-top: 360px;
+        text-align: center;
+        font-size: 18px;
+        height: 50px;
+        line-height: 44px;
+   
+        border-width: 3px;
+        border-style: solid;
+        border-color: rgba(255, 255, 255, 0.452);
+
+        border-radius: 30px;
+        box-sizing: border-box;
+        font-weight: 400;
+       transition: 0.6s;
+        color: #fff;
+
+        font-weight: 400;
+      }
+      .notice-btn:hover {
+         
+         border-width: 4px;
+          border-color: #fff;
+          height: 50px;
+        line-height: 42px;
+         }
+    
+    
+    
+    
+    
+    /* 푸터부분 */
+    .ft { background: rgb(39, 77, 78);  height: 50px; width: 100%; border-top: 1px solid rgba(255, 255, 255, 0.671);}
+    .copyright {  line-height: 50px; text-align: center; color: #fff; font-size: 20px;}
+
+
+    </style>
+  </head>
+  <body>
+    <!-- <header class="mo hd">
+      <a href="" class="home"></a>
+      <a href="" class="logo"><img src="/img/logo.png" alt=""/></a>
+    </header> -->
+    <header class="desk hd">
+      <div class="hd-wrap">
+        <a href="" class="logo">Book Ireland</a>
+        <!-- <nav id="tnb"> -->
+        
+        <button href="" class="more-button">
+          <img src="./img/menu-btn2.png" alt="" />
+        </button>
+        <!-- </nav> -->
+      </div>
+    </header>
+    <nav class="navigation">
+      <ul class="menu">
+        <li><a href="">기관소개</a></li>
+        <li><a href="">기관소식</a></li>
+        <li><a href="">사업안내</a></li>
+        <li><a href="">후원하기</a></li>
+      </ul>
+    </nav>
+    
+      <section class="choose">
+        <div class="choose-wrap">
+          <div class="icon_box"><img src="./img/main-circle.png" alt="" /></div>
+        </div>
+        <div class="main-tit-wrap">
+            
+            <div class="main-tit">
+              <p class="main-tit-move">나를 위해, 숲을 위해.</p>
+
+            </div>
+            <!-- <div class="main-des">
+              For us, for the earth.
+            </div> -->
+            <a class="search-btn">
+              중고서적 찾기
+          </a>
+         
+        </div>
+          
+        <form action="" class="search-form">
+          <input type="text" class="search-input">
+        </form>
+      </section>
+    
+      <section class="inro">
+        <h2></h2>
+        <p>북아일랜드는 이용자들의 편의를 위해 만들어 지고 서비스 되어지는 헌책방 전문 커뮤니티 웹사이트 입니다. 
+          2006년 7월 웹서비스를 처음 시작하게 되면서 좀더 편하게 만들수 없을까 라는 사용자측면에서의
+          고민과 보다 유용할 수 있을 것이라는 기대로 지금까지 오게 되었습니다. 저희는 가능한 것이 
+          있다면 두드릴 것이고 도전 할 것입니다. 사용자들에 대한 최대의 배려는 보다 유용한 서비스를
+          제공하는데 있다는 기본적인 원리를 잊지 않고 실천해 나갈 것입니다. 
+         </p>
+      </section>
+      <section class="book-list">sdsd</section>
+      <section class="clouds">
+        <h2></h2>
+        <p> 북아일랜드는 각종 온라인 쇼핑몰의 데이터를 통합 검색해 보여주는 사이트이며 검색되어 보여지는 
+          사이트와는 아무런 관련이 없습니다. 가격비교의 대상이 된 물품의 구매는 링크되어진 해당 사이트에서
+          직접 하셔야 합니다. 링크되어진 것을 이용해 편리하게 구매할 수 있는 기능을 제공하는 것이 저희 가격비교
+          서비스의 역할입니다. </p>
+      </section>
+      
+    <div class="notice">
+      <p>녹지지대를 키지는 작은 걸음. 
+         설 자리를 지키는 큰 걸음.<br>
+         중고서적
+      </p>
+               <p class="notice-letter">구매하러 가기</p>
+              <img src="./img/ski-bear.gif" alt="" class="ski-bear">
+                <img src="./img/house.gif" alt="" class="house">
+                <a class="notice-btn">
+                  N O T I C E
+              </a>
+      
+    </div>
+    <footer id="ft" class="ft">
+      <p class="copyright"> © 2019 Book Ireland</p>
+    </footer>
+    </div>
+
+  </body>
+</html>
