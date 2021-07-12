@@ -63,7 +63,12 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"
+    />
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
   </head>
 
   <body class="contains-hero main-page">
@@ -74,10 +79,43 @@
 
       <ul class="gnb-header-list">
         <li class="gnb-header-item"><a href="#">About me</a></li>
-        <li class="gnb-header-item"><a href="#">Works</a></li>
+        <li class="gnb-header-item is-active"><a href="#">Works</a></li>
       </ul>
     </header>
 
+    <section>
+      <h2 class="visually-hidden">프로젝트 슬라이드</h2>
+      <div class="project-slide">
+        <ol class="project-slide-list">
+          <li class="project-slide-item">
+            <a href="#"><img src="http://placehold.it/400x600" alt="" /></a>
+          </li>
+          <li class="project-slide-item">
+            <a href="#"><img src="http://placehold.it/400x600" alt="" /></a>
+          </li>
+          <li class="project-slide-item">
+            <a href="#"><img src="http://placehold.it/400x600" alt="" /></a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <script>
+      var slider = tns({
+        container: '.project-slide-list',
+        items: 1,
+        slideBy: 'page',
+        autoplay: true,
+        speed: 500,
+        gutter: 16,
+        edgePadding: 40,
+        autoplayButtonOutput: false,
+        nav: false,
+        mouseDrag: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
+      })
+    </script>
   </body>
 </html>
