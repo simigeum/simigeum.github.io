@@ -512,8 +512,11 @@ address {
     line-height: 16px;
     letter-spacing: -0.005em;
     color: #8c8d96; }
-  .gnb-header-item:first-child {
-    margin-right: 12px; }
+  .gnb-header-item a {
+    padding: 6px;
+    margin-right: calc(24px - 6px); }
+  .gnb-header-item:last-child a {
+    margin-right: -6px; }
   @media screen and (min-width: 768px) {
     .gnb {
       height: 60px; }
@@ -523,6 +526,12 @@ address {
         font-size: 14px; } }
 
 .gnb-header {
-  border-bottom: 1px solid #e0e2e7; }
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(224, 226, 231, 0.2);
+  backdrop-filter: blur(16px); }
 
 /*# sourceMappingURL=style.css.map */

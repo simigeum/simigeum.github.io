@@ -22,8 +22,13 @@
   }
 
   &-header-item {
-    &:first-child {
-      margin-right: 12px;
+    a {
+      padding: 6px;
+      margin-right: calc(24px - 6px);
+    }
+
+    &:last-child a {
+      margin-right: -6px;
     }
   }
 
@@ -46,5 +51,12 @@
 }
 
 .gnb-header {
-  border-bottom: 1px solid $border;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  background-color: transparent;
+  border-bottom: 1px solid rgba($border, 0.2);
+  backdrop-filter: blur(16px);
 }
