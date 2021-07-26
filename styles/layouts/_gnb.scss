@@ -1,0 +1,50 @@
+.gnb {
+  @include flexbox(between);
+  position: relative;
+  width: 100%;
+  height: 50px;
+
+  .logo {
+    a {
+      display: block;
+    }
+
+    img {
+      display: block;
+      width: auto;
+      height: 20px;
+    }
+  }
+
+  &-header-list {
+    @include flexbox(start);
+    @include text-style(12, $secondary);
+  }
+
+  &-header-item {
+    &:first-child {
+      margin-right: 12px;
+    }
+  }
+
+  @include responsive(T) {
+    height: 60px;
+
+    .logo {
+      img {
+        height: 30px;
+      }
+    }
+
+    &-header-list {
+      font-size: 14px;
+    }
+  }
+
+  @include responsive(D) {
+  }
+}
+
+.gnb-header {
+  border-bottom: 1px solid $border;
+}
