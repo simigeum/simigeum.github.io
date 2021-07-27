@@ -527,11 +527,11 @@ address {
 
 .gnb-header {
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   background-color: transparent;
   border-bottom: 1px solid rgba(224, 226, 231, 0.2);
-  backdrop-filter: blur(16px); }
+  backdrop-filter: blur(20px); }
 
 /*# sourceMappingURL=style.css.map */
