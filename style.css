@@ -494,10 +494,7 @@ address {
 .gnb {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  position: relative;
-  width: 100%;
-  height: 50px; }
+  justify-content: space-between; }
   .gnb .logo a {
     display: block; }
   .gnb .logo img {
@@ -526,12 +523,15 @@ address {
         font-size: 14px; } }
 
 .gnb-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: transparent;
-  border-bottom: 1px solid rgba(224, 226, 231, 0.2);
-  backdrop-filter: blur(20px); }
+  height: 60px; }
+  .gnb-header .gnb-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(224, 226, 231, 0.2);
+    backdrop-filter: blur(20px); }
 
 /*# sourceMappingURL=style.css.map */
