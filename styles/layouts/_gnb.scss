@@ -1,5 +1,6 @@
 .gnb {
   @include flexbox(between);
+  height: 40px;
 
   .logo {
     a {
@@ -41,6 +42,10 @@
     &-header-list {
       font-size: 14px;
     }
+
+    .gnb-header {
+      height: 60px;
+    }
   }
 
   @include responsive(D) {
@@ -48,7 +53,7 @@
 }
 
 .gnb-header {
-  height: 60px;
+  height: 40px;
 
   .gnb-wrapper {
     position: fixed;
