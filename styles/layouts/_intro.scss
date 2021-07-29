@@ -1,0 +1,85 @@
+.intro {
+  padding: 20px 0 40px 0;
+
+  &-wrapper {
+    @include flexbox(start, center);
+  }
+
+  &-profile {
+    margin-top: 40px;
+
+    img {
+      height: 200px;
+    }
+  }
+
+  &-text {
+    @include flexbox(between, start);
+    flex-direction: column;
+
+    &-title {
+      @include text-style(18, $black);
+      margin-bottom: 20px;
+    }
+
+    &-content {
+      @include text-style(14, $dark);
+    }
+
+    &-address {
+      @include text-style(12, $secondary);
+      margin-top: 20px;
+
+      a:first-child {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    padding: 80px 0;
+
+    &-profile {
+      margin-top: 20px;
+
+      img {
+        height: 300px;
+      }
+    }
+
+    &-wrapper {
+      height: 300px;
+    }
+
+    &-text {
+      height: 240px;
+    }
+
+    &-text {
+      @include flexbox(between, start);
+      flex-direction: column;
+
+      &-title {
+        @include text-style(24, $black);
+        margin-bottom: 0;
+      }
+
+      &-content {
+        @include text-style(16, $dark);
+      }
+
+      &-address {
+        @include text-style(14, $secondary);
+        margin-top: 20px;
+
+        a:first-child {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  @include responsive(D) {
+    padding: 80px 0;
+  }
+}
