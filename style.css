@@ -319,7 +319,9 @@ body {
   width: 100vw;
   overflow-x: hidden;
   font-family: "Noto Sans KR", sans-serif;
-  color: #3f4150; }
+  color: #3f4150;
+  touch-action: none;
+  -ms-touch-action: none; }
 
 body::-webkit-scrollbar {
   display: none; }
