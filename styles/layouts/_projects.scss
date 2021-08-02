@@ -1,0 +1,17 @@
+.projects {
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .tns-ovh {
+    margin: 0 -15px 0 -15px;
+  }
+
+  @include responsive(T) {
+    .tns-ovh {
+      margin: 0;
+    }
+  }
+}
