@@ -319,9 +319,7 @@ body {
   width: 100vw;
   overflow-x: hidden;
   font-family: "Noto Sans KR", sans-serif;
-  color: #3f4150;
-  touch-action: none;
-  -ms-touch-action: none; }
+  color: #3f4150; }
 
 body::-webkit-scrollbar {
   display: none; }
@@ -553,7 +551,8 @@ address {
     align-items: center;
     justify-content: flex-start; }
   .intro-profile {
-    margin-top: 40px; }
+    margin-top: 40px;
+    overflow: hidden; }
     .intro-profile img {
       height: 200px; }
   .intro-text {
@@ -584,7 +583,8 @@ address {
     .intro {
       padding: 80px 0; }
       .intro-profile {
-        margin-top: 20px; }
+        margin-top: 20px;
+        overflow: visible; }
         .intro-profile img {
           height: 300px; }
       .intro-wrapper {

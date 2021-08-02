@@ -17,8 +17,6 @@ body {
   overflow-x: hidden;
   font-family: $font-main;
   color: $primary;
-  touch-action: none;
-  -ms-touch-action: none;
 }
 
 body::-webkit-scrollbar {
