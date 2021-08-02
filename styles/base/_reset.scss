@@ -9,11 +9,18 @@
 html {
   font-family: $font-main;
   font-size: $font-size-16;
+  line-height: 0;
 }
 
 body {
+  width: 100vw;
+  overflow-x: hidden;
   font-family: $font-main;
   color: $primary;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 h1 {
