@@ -54,6 +54,10 @@
     />
 
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"
+    />
 
     <link
       rel="stylesheet"
@@ -137,25 +141,50 @@
           <div class="col-sm-4">
             <ul>
               <li>
-                <a href=""
+                <a
+                  href="https://simigeum.github.io/sunset-house/"
+                  target="_blank"
                   ><img
-                    src="./assets/img/book-cover.png"
-                    alt="북커버 레터링 디자인"
+                    src="https://simigeum.github.io//assets/img/sunset-house-website.jpg"
+                    alt="내일의 집 반응형 웹사이트 구축 이미지"
                 /></a>
               </li>
               <li>
-                <a href=""
+                <a href="http://ldu51.dothome.co.kr/w2/" target="_blank"
                   ><img
-                    src="./assets/img/book-cover.png"
-                    alt="북커버 레터링 디자인"
+                    src="https://simigeum.github.io//assets/img/hamankadon-website.jpg"
+                    alt="하만카돈 반응형 웹사이트 구축 이미지"
+                /></a>
+              </li>
+            </ul>
+
+            <ul class="gallery">
+              <li>
+                <a
+                  href="https://www.semas.or.kr/web/SUP01/SUP0102/SUP010201.kmdc"
+                  target="_blank"
+                  ><img
+                    src="https://simigeum.github.io/assets/img/small_business_consulting_2021.jpg"
+                    alt="2단 리플렛"
                 /></a>
               </li>
               <li>
-                <a href=""
-                  ><img
-                    src="./assets/img/book-cover.png"
-                    alt="북커버 레터링 디자인"
-                /></a>
+                <img
+                  src="https://simigeum.github.io/assets/img/book-cover.jpg"
+                  alt="북커버 레터링 디자인"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://simigeum.github.io/assets/img/CI_dndline.jpg"
+                  alt="dndline CI 디자인"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://simigeum.github.io/assets/img/business-card-genious.jpg"
+                  alt="genious CI 디자인"
+                />
               </li>
             </ul>
           </div>
@@ -164,7 +193,19 @@
     </section>
 
     <i class="fi-rr-computer"></i><i class="fi-rr-tablet"></i>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <script>
+      var slider = tns({
+        container: '.gallery',
+        controls: false,
+        arrowKeys: true,
+        autoplay: true,
+        autoplayHoverPauser: true,
+        autoplayButtonOutput: false,
+        mouseDrag: true,
+        preventScrollOnTouch: true,
+      })
+    </script>
   </body>
 </html>
