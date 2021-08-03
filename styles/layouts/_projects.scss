@@ -6,6 +6,7 @@
       margin-bottom: 15px;
       overflow: hidden;
       border-radius: 4px;
+      transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
 
       &:last-child {
         margin-bottom: 0;
@@ -35,6 +36,15 @@
 
     .tns-ovh {
       margin: 0;
+    }
+  }
+
+  @include responsive(D) {
+    &-web {
+      &-item:hover {
+        transform: translate3d(0, -10px, 0);
+        box-shadow: 1px 1px 26px rgba(1, 1, 1, 0.2);
+      }
     }
   }
 }
