@@ -21,5 +21,8 @@
   "homepage": "https://github.com/simigeum/simigeum.github.io#readme",
   "dependencies": {
     "node-sass": "^6.0.1"
+  },
+  "devDependencies": {
+    "node-extend": "^0.2.0"
   }
 }
