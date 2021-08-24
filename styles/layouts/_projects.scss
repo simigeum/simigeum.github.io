@@ -20,6 +20,58 @@
     object-fit: contain;
   }
 
+  .gallery-slider {
+    position: relative;
+
+    &-item img {
+      overflow: hidden;
+      border-radius: 4px;
+    }
+  }
+
+  .button-group {
+    @include pos-center;
+    @include flexbox(between);
+    width: calc(100% + 30px);
+    height: 100%;
+
+    .control-button {
+      width: 30px;
+      height: 100%;
+      background-color: $background;
+      opacity: 0.5;
+      visibility: visible;
+      transition: visibility 200ms ease-in-out,
+        background-color 200ms ease-in-out, opacity 200ms ease-in-out;
+
+      &:hover {
+        background-color: $tertiary;
+
+        .material-icons {
+          color: $black;
+          opacity: 1;
+        }
+      }
+
+      &.is-prev {
+        border-radius: 0 4px 4px 0;
+
+        span {
+          transform: rotate(-180deg);
+        }
+      }
+
+      &.is-next {
+        border-radius: 4px 0 0 4px;
+      }
+
+      &[disabled] {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+
   .tns-ovh {
     margin: 0 -15px 0 -15px;
   }
@@ -39,11 +91,19 @@
     }
   }
 
-  @include responsive(D) {
+  @include responsive(T) {
     &-web {
       &-item:hover {
         transform: translate3d(0, -10px, 0);
         box-shadow: 1px 1px 26px rgba(1, 1, 1, 0.2);
+      }
+    }
+
+    .button-group {
+      width: 100%;
+
+      .control-button {
+        width: 50px;
       }
     }
   }

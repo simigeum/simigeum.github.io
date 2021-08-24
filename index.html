@@ -64,7 +64,7 @@
       href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
   </head>
@@ -158,65 +158,75 @@
               </li>
             </ul>
 
-            <ul class="gallery">
-              <li>
-                <a
-                  href="https://www.semas.or.kr/web/SUP01/SUP0102/SUP010201.kmdc"
-                  target="_blank"
-                  ><img
-                    src="https://simigeum.github.io/assets/img/small_business_consulting_2021.jpg"
-                    alt="2단 리플렛"
-                /></a>
-              </li>
-              <li>
-                <img
-                  src="https://simigeum.github.io/assets/img/book-cover.jpg"
-                  alt="북커버 레터링 디자인"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://simigeum.github.io/assets/img/CI_dndline.jpg"
-                  alt="dndline CI 디자인"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://simigeum.github.io/assets/img/business-card-genious.jpg"
-                  alt="genious CI 디자인"
-                />
-              </li>
-            </ul>
+            <div class="gallery-slider">
+              <ul class="gallery">
+                <li class="gallery-slider-item">
+                  <a
+                    href="https://www.semas.or.kr/web/SUP01/SUP0102/SUP010201.kmdc"
+                    target="_blank"
+                    ><img
+                      src="https://simigeum.github.io/assets/img/small_business_consulting_2021.jpg"
+                      alt="2단 리플렛"
+                  /></a>
+                </li>
+                <li class="gallery-slider-item">
+                  <img
+                    src="https://simigeum.github.io/assets/img/book-cover.jpg"
+                    alt="북커버 레터링 디자인"
+                  />
+                </li>
+                <li class="gallery-slider-item">
+                  <img
+                    src="https://simigeum.github.io/assets/img/CI_dndline.jpg"
+                    alt="dndline CI 디자인"
+                  />
+                </li>
+                <li class="gallery-slider-item">
+                  <img
+                    src="https://simigeum.github.io/assets/img/business-card-genious.jpg"
+                    alt="genious CI 디자인"
+                  />
+                </li>
+              </ul>
+
+              <div class="button-group">
+                <button class="control-button is-prev" type="button">
+                  <span class="material-icons" aria-hidden>
+                    arrow_forward_ios
+                  </span>
+                </button>
+                <button class="control-button is-next" type="button">
+                  <span class="material-icons" aria-hidden>
+                    arrow_forward_ios
+                  </span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- <i class="fi-rr-computer"></i><i class="fi-rr-tablet"></i> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script>
       var slider = tns({
         container: '.gallery',
-        controls: false,
+        controls: true,
+        controlsContainer: '.button-group',
         arrowKeys: true,
-        autoplay: true,
-        autoplayHoverPauser: true,
-        autoplayButtonOutput: false,
         mouseDrag: true,
         preventScrollOnTouch: true,
         nav: false,
-        autoplayTimeout: 2800,
-      })
-
-      document.addEventListener(
-        'touchmove',
-        function (event) {
-          if (event.scale !== 1) {
-            event.preventDefault()
-          }
+        loop: false,
+        edgePadding: 45,
+        gutter: 15,
+        responsive: {
+          768: {
+            edgePadding: 80,
+            gutter: 30,
+          },
         },
-        false
-      )
+      })
     </script>
   </body>
 </html>

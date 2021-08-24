@@ -398,6 +398,28 @@ address {
   .lg-hidden {
     display: none !important; } }
 
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga'; }
+
 /*
  * MOBILE (<786px)----------------------------
  * fixture                        sm
@@ -634,6 +656,44 @@ address {
   height: 100%;
   object-fit: contain; }
 
+.projects .gallery-slider {
+  position: relative; }
+  .projects .gallery-slider-item img {
+    overflow: hidden;
+    border-radius: 4px; }
+
+.projects .button-group {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% + 30px);
+  height: 100%; }
+  .projects .button-group .control-button {
+    width: 30px;
+    height: 100%;
+    background-color: #f7f8fa;
+    opacity: 0.5;
+    visibility: visible;
+    transition: visibility 200ms ease-in-out, background-color 200ms ease-in-out, opacity 200ms ease-in-out; }
+    .projects .button-group .control-button:hover {
+      background-color: #b2b3b9; }
+      .projects .button-group .control-button:hover .material-icons {
+        color: #000;
+        opacity: 1; }
+    .projects .button-group .control-button.is-prev {
+      border-radius: 0 4px 4px 0; }
+      .projects .button-group .control-button.is-prev span {
+        transform: rotate(-180deg); }
+    .projects .button-group .control-button.is-next {
+      border-radius: 4px 0 0 4px; }
+    .projects .button-group .control-button[disabled] {
+      opacity: 0;
+      visibility: hidden; }
+
 .projects .tns-ovh {
   margin: 0 -15px 0 -15px; }
 
@@ -646,9 +706,13 @@ address {
   .projects .tns-ovh {
     margin: 0; } }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .projects-web-item:hover {
     transform: translate3d(0, -10px, 0);
-    box-shadow: 1px 1px 26px rgba(1, 1, 1, 0.2); } }
+    box-shadow: 1px 1px 26px rgba(1, 1, 1, 0.2); }
+  .projects .button-group {
+    width: 100%; }
+    .projects .button-group .control-button {
+      width: 50px; } }
 
 /*# sourceMappingURL=style.css.map */
