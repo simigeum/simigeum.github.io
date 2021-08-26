@@ -21,6 +21,7 @@
     &-title {
       @include text-style(18, $black);
       margin-bottom: 20px;
+      font-weight: 700;
     }
 
     &-content {
