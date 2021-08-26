@@ -63,3 +63,18 @@ ol {
 address {
   font-style: normal;
 }
+
+::-moz-selection {
+  color: $white;
+  background: $green;
+}
+
+::selection {
+  color: $white;
+  background: $green;
+}
+
+::-webkit-selection {
+  color: $white;
+  background: $green;
+}
