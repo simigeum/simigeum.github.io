@@ -1,0 +1,36 @@
+.certificate {
+  padding: 80px 0;
+
+  &-wrapper {
+    @include flexbox(start, start);
+    flex-direction: column;
+  }
+
+  &-title {
+    @include text-style(24, $black);
+    margin-bottom: 16px;
+  }
+
+  &-list {
+    .certificate-name {
+      @include text-style(16, $dark);
+      font-weight: 600;
+    }
+  }
+
+  .certificate-issuer {
+    @include text-style(14, $secondary);
+  }
+
+  .certificate-date {
+    @include text-style(12, $tertiary);
+  }
+
+  &-item {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
