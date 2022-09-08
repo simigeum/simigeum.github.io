@@ -26,14 +26,72 @@
 
     &-content {
       @include text-style(14, $dark);
+
+      .blog {
+        strong {
+          @include inline-flexbox(start);
+          overflow: hidden;
+          color: transparent;
+          -webkit-background-clip: text;
+          background-clip: text;
+          background-image: linear-gradient(
+            180deg,
+            #f5e2b0,
+            #f5b5b5 10%,
+            #db8787 33%,
+            #d29bd5 42%,
+            #daf5f1 50%,
+            #9bd5a6 66%,
+            #629363
+          );
+          background-position: 50% 0;
+          background-size: 100% 300%;
+          animation: gradientAnim 2s ease-in-out forwards;
+        }
+
+        @keyframes gradientAnim {
+          0% {
+            background-position: 50% 0;
+          }
+
+          to {
+            background-position: 50% 100%;
+          }
+        }
+
+        @keyframes gradientAnimHover {
+          0% {
+            background-position: 50% 100%;
+          }
+
+          to {
+            background-position: 50% 0;
+          }
+        }
+      }
     }
 
     &-address {
+      @include flexbox(start);
       @include text-style(12, $secondary);
       margin-top: 20px;
 
+      a {
+        @include flexbox;
+
+        i {
+          margin-right: 2px;
+          font-size: 16px;
+        }
+      }
+
       a:first-child {
         margin-right: 8px;
+
+        i {
+          margin-right: 1px;
+          font-size: 20px;
+        }
       }
     }
   }
@@ -76,7 +134,7 @@
         margin-top: 20px;
 
         a:first-child {
-          margin-right: 8px;
+          margin-right: 12px;
         }
       }
     }
@@ -84,5 +142,13 @@
 
   @include responsive(D) {
     padding: 80px 0;
+
+    &-text-content {
+      .blog {
+        strong:hover {
+          animation: gradientAnimHover 2s ease-in-out forwards;
+        }
+      }
+    }
   }
 }
