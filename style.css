@@ -615,21 +615,9 @@ address {
         -webkit-background-clip: text;
         background-clip: text;
         background-image: linear-gradient(180deg, #f5e2b0, #f5b5b5 10%, #db8787 33%, #d29bd5 42%, #daf5f1 50%, #9bd5a6 66%, #629363);
-        background-position: 50% 0;
+        background-position: 50% 0%;
         background-size: 100% 300%;
-        animation: gradientAnim 2s ease-in-out forwards; }
-
-@keyframes gradientAnim {
-  0% {
-    background-position: 50% 0; }
-  to {
-    background-position: 50% 100%; } }
-
-@keyframes gradientAnimHover {
-  0% {
-    background-position: 50% 100%; }
-  to {
-    background-position: 50% 0; } }
+        transition: background-position 1.2s ease-in-out; }
     .intro-text-address {
       display: flex;
       align-items: center;
@@ -689,9 +677,7 @@ address {
             margin-right: 12px; } }
   @media screen and (min-width: 1200px) {
     .intro {
-      padding: 80px 0; }
-      .intro-text-content .blog strong:hover {
-        animation: gradientAnimHover 2s ease-in-out forwards; } }
+      padding: 80px 0; } }
 
 .projects-web {
   padding: 20px 0; }

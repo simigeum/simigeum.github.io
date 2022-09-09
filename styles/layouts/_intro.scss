@@ -44,29 +44,9 @@
             #9bd5a6 66%,
             #629363
           );
-          background-position: 50% 0;
+          background-position: 50% 0%;
           background-size: 100% 300%;
-          animation: gradientAnim 2s ease-in-out forwards;
-        }
-
-        @keyframes gradientAnim {
-          0% {
-            background-position: 50% 0;
-          }
-
-          to {
-            background-position: 50% 100%;
-          }
-        }
-
-        @keyframes gradientAnimHover {
-          0% {
-            background-position: 50% 100%;
-          }
-
-          to {
-            background-position: 50% 0;
-          }
+          transition: background-position 1.2s ease-in-out;
         }
       }
     }
@@ -142,13 +122,5 @@
 
   @include responsive(D) {
     padding: 80px 0;
-
-    &-text-content {
-      .blog {
-        strong:hover {
-          animation: gradientAnimHover 2s ease-in-out forwards;
-        }
-      }
-    }
   }
 }
