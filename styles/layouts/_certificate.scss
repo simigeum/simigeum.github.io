@@ -9,6 +9,10 @@
   &-title {
     @include text-style(24, $black);
     margin-bottom: 16px;
+
+    &.last-item {
+      margin-top: 60px;
+    }
   }
 
   &-list {
@@ -31,6 +35,14 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  @include responsive(T) {
+    &-title {
+      &.last-item {
+        margin-top: 0;
+      }
     }
   }
 }

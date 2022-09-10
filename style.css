@@ -766,6 +766,8 @@ address {
     letter-spacing: -0.01em;
     color: #000;
     margin-bottom: 16px; }
+    .certificate-title.last-item {
+      margin-top: 60px; }
   .certificate-list .certificate-name {
     font-size: 16px;
     line-height: 24px;
@@ -786,5 +788,8 @@ address {
     margin-bottom: 8px; }
     .certificate-item:last-child {
       margin-bottom: 0; }
+  @media screen and (min-width: 768px) {
+    .certificate-title.last-item {
+      margin-top: 0; } }
 
 /*# sourceMappingURL=style.css.map */
