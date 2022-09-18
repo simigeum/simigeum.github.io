@@ -115,13 +115,7 @@
                       target="_blank"
                       class="blog"
                     >
-                      <strong
-                        >퍼블리싱 블로그
-                        <i class="material-icons" aria-hidden
-                          >open_in_new</i
-                        ></strong
-                      ></a
-                    >를 운영하고 있습니다.
+                      <strong>퍼블리싱 블로그<i class="material-icons" aria-hidden>open_in_new</i></strong></a>를 운영하고 있습니다.
                   </p>
                   <p>
                     Semantic Markup와 User Experience에 대한 고민을
@@ -330,20 +324,33 @@
     </script>
 
     <script>
-      const blogLink = document.querySelector('.blog strong')
+      const blogLinkArea = document.querySelectorAll('.blog strong, .blog strong i')
+      const blogLinkText = document.querySelector('.blog strong')
 
-      function turnGreen() {
-        blogLink.style.backgroundPosition = '50% 100%'
-      }
+      blogLinkArea.forEach(function(link){
+             function turnGreen() {
+              link.style.backgroundPosition = '50% 100%'
+            }
 
-      blogLink.addEventListener('mouseleave', turnGreen)
-      document.addEventListener('DOMContentLoaded', turnGreen)
+            document.addEventListener('DOMContentLoaded', turnGreen) 
+      })
 
-      function turnRed() {
-        blogLink.style.backgroundPosition = '50% 0%'
-      }
+      blogLinkText.addEventListener('mouseover',  () => {
+            blogLinkArea.forEach(function(link){
+              link.style.backgroundPosition = '50% 0%'
+            })
+      })
 
-      blogLink.addEventListener('mouseover', turnRed)
+
+      blogLinkText.addEventListener('mouseleave',  () => {
+            blogLinkArea.forEach(function(link){
+              link.style.backgroundPosition = '50% 100%'
+            })
+      })
+
+    
+
+     
     </script>
   </body>
 </html>
