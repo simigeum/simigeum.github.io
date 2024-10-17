@@ -72,9 +72,71 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+      $(function(){
+  //  마우스 따라다니는 스크립트
+  const coords = { x: 0, y: 0 };
+              const circles = document.querySelectorAll(".mouse-effect");
+
+              const colors = [
+               ""
+              ];
+
+              circles.forEach(function (circle, index) {
+                circle.x = 0;
+                circle.y = 0;
+                circle.style.backgroundColor = colors[index % colors.length];
+              });
+
+              window.addEventListener("mousemove", function(e){
+                coords.x = e.clientX;
+                coords.y = e.clientY;
+
+              });
+
+              function animateCircles() {
+
+                let x = coords.x;
+                let y = coords.y;
+
+                circles.forEach(function (circle, index) {
+                  circle.style.left = x - 10 + "px";
+                  circle.style.top = y - 10 + "px";
+
+                  circle.style.scale = (circles.length + index) / circles.length;
+
+                  circle.x = x;
+                  circle.y = y;
+
+                  const nextCircle = circles[index + 1] || circles[0];
+                  x += (nextCircle.x - x) * 1;
+                  y += (nextCircle.y - y) * 1;
+                });
+
+                requestAnimationFrame(animateCircles);
+              }
+              animateCircles();
+
+              $('a, button').hover(function(){
+                $('.mouse-effect').addClass('active');
+              }, function(){
+                $('.mouse-effect').removeClass('active');
+              });
+      });
+     
+       
+    </script>
   </head>
 
   <body>
+    <div class="mouse-effect">
+      <span class="material-symbols-outlined ic-dive">
+        arrow_forward
+        </span>
+    </div>
+
     <header class="gnb-header">
       <div class="gnb-wrapper">
         <div class="container">
