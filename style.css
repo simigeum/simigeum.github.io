@@ -449,7 +449,7 @@ address {
   pointer-events: none;
   z-index: 10000;
   opacity: 0.99;
-  transition: transform ease-in-out 200ms, opacity ease-in-out 600ms, mix-blend-mode ease-in-out 1000ms, background-color ease-in-out 600ms;
+  transition: transform ease-in-out 200ms, opacity ease-in-out 600ms, mix-blend-mode ease-in-out 1000ms, background-color ease-in-out 600ms, top ease-out 80ms, left ease-out 80ms;
   transform: scale(1); }
   .mouse-effect.active {
     mix-blend-mode: difference;

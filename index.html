@@ -76,25 +76,37 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
       $(function(){
-  //  마우스 따라다니는 스크립트
-  const coords = { x: 0, y: 0 };
+              //  마우스 따라다니는 스크립트
+              const coords = { x: 0, y: 0 };
               const circles = document.querySelectorAll(".mouse-effect");
 
               const colors = [
                ""
               ];
 
+              // 마우스가 움직일 때만 애니메이션 시작
+              let isMouseMoved = false;
+
               circles.forEach(function (circle, index) {
                 circle.x = 0;
                 circle.y = 0;
                 circle.style.backgroundColor = colors[index % colors.length];
+                circle.style.display = "none"; // 처음에는 안 보이게
               });
 
               window.addEventListener("mousemove", function(e){
                 coords.x = e.clientX;
                 coords.y = e.clientY;
 
-              });
+              // 마우스가 움직였을 때만 애니메이션 시작
+              if (!isMouseMoved) {
+                    isMouseMoved = true;
+                    circles.forEach(circle => {
+                      circle.style.display = "flex"; // 마우스 움직임이 시작되면 보이게
+                    });
+                    animateCircles();
+                  }
+                });
 
               function animateCircles() {
 
@@ -102,17 +114,19 @@
                 let y = coords.y;
 
                 circles.forEach(function (circle, index) {
+                  
                   circle.style.left = x - 10 + "px";
                   circle.style.top = y - 10 + "px";
-
+                  
                   circle.style.scale = (circles.length + index) / circles.length;
-
+                  
                   circle.x = x;
                   circle.y = y;
-
+                  
                   const nextCircle = circles[index + 1] || circles[0];
-                  x += (nextCircle.x - x) * 1;
-                  y += (nextCircle.y - y) * 1;
+                  x += (nextCircle.x - x) * 0.3;
+                  y += (nextCircle.y - y) * 0.3;
+                 
                 });
 
                 requestAnimationFrame(animateCircles);
@@ -126,7 +140,7 @@
               });
       });
      
-       
+  
     </script>
   </head>
 
